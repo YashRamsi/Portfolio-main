@@ -1,0 +1,910 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.nav-center {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-center li {
+    display: inline;
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-center li a:hover {
+    color: #5cb85c;
+}
+
+/* Background Styling */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;  
+    position: relative;
+}
+
+.content {
+    margin-top: -80px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 4rem; 
+    font-weight: bold;
+}
+
+.logo-img {
+    height: 100px; 
+    width: auto;
+    margin: 0 20px; 
+}
+
+p {
+    font-size: 1rem;  
+    max-width: 700px;  
+    line-height: 1.6;
+    margin: 20px auto;
+}
+
+/* Social Links Styling */
+.social-links a {
+    color: #333;
+    font-size: 2.5rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #5cb85c;
+}
+
+/* Buttons Styling */
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button, .buttons .cv-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: 2px solid #5cb85c;
+    background: none;
+    color: #5cb85c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.buttons button:hover, .buttons .cv-btn:hover {
+    background: #5cb85c;
+    color: #fff;
+}
+
+/* Contact Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal-content a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Intro Section Styling */
+.intro {
+    padding: 17px 1%;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+/* Flexbox Layout for Proper Alignment */
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px; /* NEW: Increased width */
+    width: 90%; /* Ensures responsiveness */
+    margin: 0 auto;
+}
+
+
+/* Profile Image Styling */
+.profile-img {
+    width: 250px; /* NEW: Slightly larger image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Adjust Text Block */
+.intro-text {
+    max-width: 70%; /* NEW: More width for longer sentences */
+    text-align: justify;
+}
+
+
+/* Intro Title */
+.intro-text h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs Styling */
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Instagram Link */
+.intro-text a {
+    color: #5cb85c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.intro-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 180px;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Roadmap Section Styling */
+.roadmap {
+    position: relative;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Single Straight Roadmap Line */
+.roadmap::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+    background: #5cb85c;
+    z-index: 1;
+}
+
+/* Roadmap Container */
+.roadmap-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Roadmap Items */
+.roadmap-item {
+    text-align: center;
+    position: relative;
+    width: 18%;
+    padding-top: 20px; /* Ensures spacing above the line */
+}
+
+/* Timeline Dots */
+.roadmap-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #5cb85c;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    z-index: 2;
+}
+
+/* Title Styling Above the Line */
+.roadmap-item h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    position: relative;
+    top: -40px; /* Ensures consistent spacing above the node */
+}
+
+/* University/Company Styling */
+.roadmap-item p {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    position: relative;
+    top: -65px; /* Adjusted value to move locations slightly up */
+}
+
+
+/* Dates Positioned Below the Line */
+.roadmap-item .year {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #5cb85c;
+    position: relative;
+    top: 2px; /* Moves dates further below the line */
+    z-index: 2;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+    .roadmap::before {
+        top: 20px;
+        left: 10%;
+        width: 80%;
+    }
+
+    .roadmap-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .roadmap-item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .roadmap-item::before {
+        top: 20px;
+    }
+
+    .roadmap-item h4,
+    .roadmap-item p,
+    .roadmap-item .year {
+        top: 0;
+    }
+}
+
+/* Skills Section */
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Skill Filters */
+.skill-filters {
+    margin-bottom: 20px;
+}
+
+.skill-filters .filter-btn {
+    padding: 8px 15px;
+    border: 1px solid #5cb85c;
+    background: white;
+    color: #5cb85c;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.skill-filters .filter-btn:hover {
+    background: #5cb85c;
+    color: white;
+}
+
+/* Skill Cards */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-card {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background: #5cb85c;
+    color: white;
+}
+
+/* Skill Tags */
+.skill-tag {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #666;
+    margin-top: 5px;
+}
+
+.skill-card:hover .skill-tag {
+    color: white;
+}
+
+/* Certifications Section */
+.certifications {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.certifications h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Certification Category Headers */
+.cert-category {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #5cb85c;
+}
+
+.certs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cert-item {
+    width: 280px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cert-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cert-item h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cert-item:hover {
+    transform: scale(1.05);
+}
+
+/* Modal for Enlarged Certification Images */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Enlarged Certificate Modal */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 95vw;  /* 95% of the viewport width */
+    max-height: 98vh; /* 98% of the viewport height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure the Certificate Image Scales Properly */
+.modal-image {
+    width: 100%;  /* Fill the modal width */
+    max-width: 1000px; /* Set a max size */
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain; /* Ensure the entire image is visible */
+}
+
+/* Certificate Title */
+.modal h3 {
+    font-size: 1.8rem; /* Bigger text */
+    color: #333;
+    margin: 15px 0;
+}
+
+/* View Certificate Link */
+.modal a {
+    display: inline-block;
+    color: #5cb85c;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: 2px solid #5cb85c;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.modal a:hover {
+    background: #5cb85c;
+    color: white;
+}
+
+/* Close Button - Bigger */
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.8rem; /* Bigger close button */
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal .close:hover {
+    color: #5cb85c;
+}
+
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #5cb85c;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.service-card .learn-more {
+    padding: 10px 20px;
+    border: 2px solid #5cb85c;
+    background: none;
+    color: #5cb85c;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.service-card .learn-more:hover {
+    background: #5cb85c;
+    color: white;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 100px auto;
+    position: relative;
+    text-align: left;
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #555;
+}
+
+.modal-content p {
+    margin-top: 15px;
+    color: #555;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-content .close:hover {
+    color: #333;
+}
+
+
+/* Portfolio Section */
+.portfolio {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-filters {
+    margin: 20px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid #5cb85c;
+    background: white;
+    color: #5cb85c;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: #5cb85c;
+    color: white;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 100px auto;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.modal-content a {
+    color: #5cb85c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #5cb85c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-btn {
+    padding: 15px 30px;
+    border: 2px solid #5cb85c;
+    background: none;
+    color: #5cb85c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    background: #5cb85c;
+    color: white;
+}
+
+/* Interactive Map */
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #555;
+}
+
+footer a {
+    color: #5cb85c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #5cb85c;
+}
