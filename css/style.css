@@ -8,6 +8,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Ensure images scale properly on all devices */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -899,4 +905,125 @@ footer a:hover {
 
 .social-icons a:hover {
     color: #5cb85c;
+}
+
+/* Mobile Responsive Enhancements */
+
+@media (max-width: 1024px) {
+    .nav-center {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .navbar {
+        padding: 10px 0;
+    }
+    .nav-center li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .buttons button, .buttons .cv-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img {
+        width: 150px;
+    }
+    .intro-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .roadmap-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .roadmap-item {
+        width: 100%;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .certs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    .content p {
+        font-size: 0.9rem;
+    }
+    .buttons button, .buttons .cv-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    .social-links a {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+    .profile-img {
+        width: 120px;
+    }
+    .roadmap-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .roadmap-item h4 {
+        font-size: 0.9rem;
+    }
+    .roadmap-item p, .roadmap-item .year {
+        font-size: 0.8rem;
+    }
+    .skill-card {
+        width: 90%;
+    }
+    .cert-item {
+        width: 90%;
+    }
+    .service-card {
+        width: 90%;
+    }
+    .portfolio-item {
+        width: 90%;
+    }
+    .contact p {
+        font-size: 0.9rem;
+    }
 }
