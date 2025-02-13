@@ -142,14 +142,14 @@ window.addEventListener('click', function (event) {
 
 // Initialize the interactive map
 function initMap() {
-    var map = L.map('map').setView([53.8008, -1.5491], 6); // Default: Leeds, UK
+    var map = L.map('map').setView([29.7189, -95.3392], 8); // Default: Leeds, UK
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([53.8008, -1.5491]).addTo(map)
-        .bindPopup("Vamsi Mudila is here!")
+    L.marker([29.7189, -95.3392]).addTo(map)
+        .bindPopup("Yaswanth Pavuluri lives here!")
         .openPopup();
 }
 

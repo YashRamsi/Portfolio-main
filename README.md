@@ -1,4 +1,4 @@
 # Portfolio
-Portfolio of Vamsi Mudila
+Portfolio of 
 
-This can be found at the link https://vamsi-mudila.github.io/Portfolio/
+This can be found at the link 

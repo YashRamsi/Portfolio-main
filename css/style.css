@@ -2,8 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: "Garamond", "Georgia", serif;
+    color: #000000;
     text-align: center;
     overflow-x: hidden;
 }
@@ -11,7 +11,7 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: #6C757D;
     padding: 15px 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 1000;
@@ -48,7 +48,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #ffffff;
+    background: #6C757D;
     z-index: -1;
 }
 
@@ -118,7 +118,7 @@ p {
 
 .buttons button:hover, .buttons .cv-btn:hover {
     background: #5cb85c;
-    color: #fff;
+    color: #000000;
 }
 
 /* Contact Modal Styling */
@@ -134,7 +134,7 @@ p {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #000000;
     margin: 15% auto;
     padding: 20px;
     width: 40%;
@@ -163,7 +163,7 @@ p {
 /* Intro Section Styling */
 .intro {
     padding: 17px 1%;
-    background: #f8f9fa;
+    background: #6C757D;
     text-align: center;
 }
 
@@ -199,7 +199,7 @@ p {
 .intro-text h3 {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: #000000;
     margin-bottom: 15px;
 }
 
@@ -207,19 +207,8 @@ p {
 .intro-text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #444;
+    color: #000000;
     margin-bottom: 15px;
-}
-
-/* Instagram Link */
-.intro-text a {
-    color: #5cb85c;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.intro-text a:hover {
-    text-decoration: underline;
 }
 
 /* Responsive Layout */
@@ -281,7 +270,7 @@ p {
     content: "";
     width: 12px;
     height: 12px;
-    background: #5cb85c;
+    background: #1495b9;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -295,7 +284,7 @@ p {
 .roadmap-item h4 {
     font-size: 1rem;
     font-weight: bold;
-    color: #333;
+    color: #df7a0e;
     margin-bottom: 5px;
     position: relative;
     top: -40px; /* Ensures consistent spacing above the node */
@@ -304,7 +293,7 @@ p {
 /* University/Company Styling */
 .roadmap-item p {
     font-style: italic;
-    color: #777;
+    color: #ffffff;
     font-size: 0.9rem;
     margin-bottom: 10px;
     position: relative;
@@ -355,19 +344,19 @@ p {
 .skills {
     text-align: center;
     padding: 50px 20px;
-    background: #f8f9fa;
+    background: #6C757D;
 }
 
 .skills h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
 }
 
 .skills p {
     font-size: 1rem;
     margin-bottom: 30px;
-    color: #555;
+    color: #000000;
 }
 
 /* Skill Filters */
@@ -376,9 +365,10 @@ p {
 }
 
 .skill-filters .filter-btn {
+    font-family: "Garamond", "Georgia", serif;
     padding: 8px 15px;
     border: 1px solid #5cb85c;
-    background: white;
+    background: #6C757D;
     color: #5cb85c;
     font-size: 0.9rem;
     cursor: pointer;
@@ -388,7 +378,7 @@ p {
 
 .skill-filters .filter-btn:hover {
     background: #5cb85c;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Skill Cards */
@@ -400,7 +390,7 @@ p {
 }
 
 .skill-card {
-    background: white;
+    background: #8b8a87;
     padding: 15px 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -424,7 +414,7 @@ p {
     display: block;
     font-size: 0.8rem;
     font-weight: normal;
-    color: #666;
+    color: #4f4b4b;
     margin-top: 5px;
 }
 
@@ -436,7 +426,7 @@ p {
 .certifications {
     text-align: center;
     padding: 50px 20px;
-    background: #f8f9fa;
+    background: #6C757D;
 }
 
 .certifications h2 {
@@ -573,19 +563,19 @@ p {
 .services {
     padding: 60px 20px;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: #6C757D;
 }
 
 .services h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #000000;
 }
 
 .services p {
     font-size: 1rem;
     margin-bottom: 40px;
-    color: #555;
+    color: #000000;
     line-height: 1.5;
 }
 
@@ -599,7 +589,7 @@ p {
 }
 
 .service-card {
-    background: white;
+    background: #6C757D;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -618,18 +608,18 @@ p {
 .service-card h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
 }
 
 .service-card p {
     font-size: 0.9rem;
     margin-bottom: 20px;
-    color: #666;
+    color: #000000;
 }
 
 .service-card .learn-more {
     padding: 10px 20px;
-    border: 2px solid #5cb85c;
+    border: 10px #5cb85c;
     background: none;
     color: #5cb85c;
     font-size: 0.9rem;
@@ -641,7 +631,7 @@ p {
 
 .service-card .learn-more:hover {
     background: #5cb85c;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Modals */
@@ -702,7 +692,7 @@ p {
 .portfolio {
     text-align: center;
     padding: 50px 20px;
-    background: #f8f9fa;
+    background: #6C757D;
 }
 
 .portfolio h2 {
@@ -716,8 +706,9 @@ p {
 
 .filter-btn {
     padding: 10px 20px;
+    font-weight: bold;
     border: 1px solid #5cb85c;
-    background: white;
+    background: #6C757D;
     color: #5cb85c;
     font-size: 1rem;
     cursor: pointer;
@@ -727,7 +718,7 @@ p {
 
 .filter-btn:hover {
     background: #5cb85c;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .portfolio-container {
@@ -759,7 +750,7 @@ p {
 .portfolio-item h3 {
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #333;
+    color: #000000;
 }
 
 .portfolio-item:hover {
@@ -779,7 +770,7 @@ p {
 }
 
 .modal-content {
-    background: white;
+    background: #6C757D;
     padding: 30px;
     border-radius: 10px;
     max-width: 500px;
@@ -789,12 +780,12 @@ p {
 
 .modal-content h2 {
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
 }
 
 .modal-content p {
     font-size: 1rem;
-    color: #555;
+    color: #000000;
     margin-bottom: 10px;
 }
 
@@ -809,18 +800,19 @@ p {
 .contact {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f8f9fa;
+    background-color: #6C757D;
 }
 
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #000000;
 }
+
 
 .contact p {
     font-size: 1.2rem;
-    color: #555;
+    color: #000000;
     max-width: 700px;
     margin: 0 auto 30px;
     line-height: 1.6;
@@ -833,7 +825,7 @@ p {
 }
 
 .contact a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Contact Buttons */
@@ -859,7 +851,7 @@ p {
 
 .contact-btn:hover {
     background: #5cb85c;
-    color: white;
+    color: #000000;
 }
 
 /* Interactive Map */
@@ -875,12 +867,12 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background: #fff;
+    background: #6C757D;
 }
 
 footer p {
     margin: 5px 0;
-    color: #555;
+    color: #000000;
 }
 
 footer a {
@@ -890,7 +882,7 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Social Icons */
@@ -899,7 +891,7 @@ footer a:hover {
 }
 
 .social-icons a {
-    color: #333;
+    color: #000000;
     font-size: 1.5rem;
     margin: 0 10px;
     transition: color 0.3s;
