@@ -665,18 +665,18 @@ p {
 
 .modal-content h3 {
     margin-bottom: 15px;
-    color: #333;
+    color: #000000;
 }
 
 .modal-content ul {
     list-style: disc;
     margin-left: 20px;
-    color: #555;
+    color: #000000;
 }
 
 .modal-content p {
     margin-top: 15px;
-    color: #555;
+    color: #000000;
 }
 
 .modal-content .close {
