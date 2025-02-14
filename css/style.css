@@ -1045,9 +1045,15 @@ footer a:hover {
         display: none;
     }
     
-    /* Hide Navbar When Scrolling on Desktop, Show Shortcut Button */
     .navbar {
-        position: absolute;
+        position: fixed; /* Keep navbar always visible */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #6C757D;
+        padding: 15px 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
     
     .shortcut-nav {
