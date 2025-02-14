@@ -306,17 +306,24 @@
     <div class="portfolio-container">
         <!-- Project 1 -->
         <div class="portfolio-item data-analysis" onclick="openModal('modal1')">
-            <img src="assets/project-images/gender-diversity.jpeg" alt="Gender Diversity in CS Publications">
-            <h3>Gender Diversity in CS Publications</h3>
+            <img src="assets/project-images/car-crash-analysis.jpeg" alt="Car Crash Analysis">
+            <h3>Car Crash Analysis</h3>
         </div>
 
         <!-- Project 2 -->
         <div class="portfolio-item data-analysis" onclick="openModal('modal2')">
-            <img src="assets/project-images/natural-disasters.jpeg" alt="Natural Disasters Analysis">
-            <h3>Natural Disasters Analysis</h3>
+            <img src="assets/project-images/MRBot.jpeg" alt="MRBot Trajectory Analysis">
+            <h3>MRBot Trajectory Analysis</h3>
         </div>
 
         <!-- Project 3 -->
+        <div class="portfolio-item dashboards" onclick="openModal('modal3')">
+            <img src="assets/project-images/Exploratory-GeoSpatial-Analysis.jpeg" alt="Crime Data GeoSpatial-Analysis">
+            <h3>Crime Data GeoSpatial-Analysis</h3>
+        </div>
+
+    
+        <!-- Project 4 -->
         <div class="portfolio-item dashboards" onclick="openModal('modal3')">
             <img src="assets/project-images/room-utilization.png" alt="Room Utilization Analysis">
             <h3>Room Utilization Analysis</h3>
@@ -327,24 +334,36 @@
 <div id="modal1" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Gender Diversity in CS Publications</h2>
-        <p>This project explores gender diversity trends in computer science publications using data from the DBLP API and Kaggle.</p>
-        <p>📌 <strong>Tools Used:</strong> Python, Pandas, Dash</p>
-        <p>📊 <strong>Impact:</strong> Provided key insights into gender representation in CS research over 20 years.</p>
-        <p> <a href="https://github.com/Vamsi-Mudila/Gender-Diversity-CS-Publications" target="_blank">GitHub Repository</a>  
-            <a href="assets/reports/Gender-Diversity-Report.pdf" target="_blank">Report</a></p>
+        <h2>Car Crash Report Analysis</h2>
+        <p>This project explores crash analysis trends in Missouri State using data from the state crash data using API and web scrapping.</p>
+        <p>📌 <strong>Tools Used:</strong> Python, Pandas, BSoup</p>
+        <p>📊 <strong>Impact:</strong> Provided key insights in predicting injury type in crash based on several data points involved</p>
+        <p> <a href="https://github.com/YashRamsi/Car-Crash-Analysis" target="_blank">GitHub Repository</a>  
+            <a href="assets/reports/CRASH_REPORT_ANALYSIS.docx" target="_blank">Report</a></p>
     </div>
 </div>
 
 <div id="modal2" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h2>Natural Disasters Analysis</h2>
-        <p>Analyzed the impact of natural disasters on mortality from 2000 to 2020 using EM-DAT data.</p>
-        <p>📌 <strong>Tools Used:</strong> Python, SQL, Tableau</p>
-        <p>📊 <strong>Impact:</strong> Helped identify patterns in disaster responses and mortality rates.</p>
-        <p> <a href="https://github.com/Vamsi-Mudila/Natural-Disasters-Data-Analysis" target="_blank">GitHub Repository</a>  
-            <a href="assets/reports/Natural-Disasters-Report.pdf" target="_blank">Report</a></p>
+        <h2>MRBot Trajectory Analysis</h2>
+        <p>Aimed to implement a navigational framework for MRbots using reasonable computational resources.</p>
+        <p>📌 <strong>Tools Used:</strong> Python, SQL, Medical Imaging</p>
+        <p>📊 <strong>Impact:</strong> Helped identify patterns in implementation of MRBot and analysing its trajectory.</p>
+        <p> <a href="https://github.com/YashRamsi/MRBot" target="_blank">GitHub Repository</a>  
+            <a href="assets/reports/MRBot_Project_Report.pdf" target="_blank">Report</a></p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Exploratory Geo-Spatial Crime Data Analysis</h2>
+        <p>Developed anlaytic trends to track locations of crime data in 5 boroughs of New York city.</p>
+        <p>📌 <strong>Tools Used:</strong> Python, GeoPandas, Folium</p>
+        <p>📊 <strong>Impact:</strong> Identifying the crime hotspots and alerting troops instantly .</p>
+        <p> <a href="https://github.com/YashRamsi/Exploratory-GeoSpatial-Analysis" target="_blank">GitHub Repository</a>
+            <a href="assets/reports/Crime_Data_Visualization_Report.pdf" target="_blank">Report</a></p>
     </div>
 </div>
 
@@ -381,7 +400,7 @@
 
 <!-- Contact Section -->
 <section id="contact" class="contact">
-    <h2>CONTACT</h2>
+    <h2>Contact</h2>
     <p>
         Feel free to contact me for any questions.<br>
         For open-source projects, please open an issue or pull request on GitHub<br> 
