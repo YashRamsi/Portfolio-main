@@ -179,6 +179,7 @@ document.querySelectorAll(".nav-center a").forEach(link => {
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
     const navbar = document.querySelector(".navbar");
+    const homeSection = document.querySelector("#home");
 
     // Create the hamburger menu icon (☰)
     const hamburgerMenu = document.createElement("div");
@@ -221,20 +222,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Scroll behavior: hide navbar and show hamburger menu on scroll down
+    // Scroll behavior: hide navbar when scrolling down, show it when scrolling up
     window.addEventListener("scroll", function () {
         let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.documentElement.scrollHeight;
 
-        if (scrollTop > lastScrollTop) {
+        if (scrollTop + windowHeight >= documentHeight) {
+            // User has reached the bottom
+            hamburgerMenu.style.display = "block"; // Keep hamburger visible
+        } else if (scrollTop > lastScrollTop) {
             // Scrolling Down
             navbar.style.top = "-80px"; // Hide Navbar
             hamburgerMenu.style.display = "block"; // Show Hamburger
         } else {
             // Scrolling Up
             navbar.style.top = "0"; // Show Navbar
-            hamburgerMenu.style.display = "none"; // Hide Hamburger
-            hamburgerDropdown.style.display = "none"; // Close dropdown
+
+            // Check if home section is visible
+            let homeTop = homeSection.getBoundingClientRect().top;
+            if (homeTop >= 0) {
+                hamburgerMenu.style.display = "none"; // Hide Hamburger when reaching home
+            }
         }
+
         lastScrollTop = scrollTop;
     });
 });
