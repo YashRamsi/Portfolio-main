@@ -189,28 +189,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburgerDropdown = document.createElement("div");
     hamburgerDropdown.classList.add("hamburger-dropdown");
     hamburgerDropdown.innerHTML = `
-        <a href="#home">HOME</a>
-        <a href="#intro">INTRO</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#certifications">CERTIFICATIONS</a>
-        <a href="#services">SERVICES</a>
-        <a href="#portfolio">DEV HUB</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#home" class="menu-item">HOME</a>
+        <a href="#about" class="menu-item">INTRO</a>
+        <a href="#skills" class="menu-item">SKILLS</a>
+        <a href="#certifications" class="menu-item">CERTIFICATIONS</a>
+        <a href="#services" class="menu-item">SERVICES</a>
+        <a href="#portfolio" class="menu-item">DEV HUB</a>
+        <a href="#contact" class="menu-item">CONTACT</a>
     `;
 
     document.body.appendChild(hamburgerMenu);
     document.body.appendChild(hamburgerDropdown);
 
     // Toggle dropdown menu when clicking the hamburger icon
-    hamburgerMenu.addEventListener("click", function () {
-        hamburgerDropdown.style.display = hamburgerDropdown.style.display === "block" ? "none" : "block";
+    hamburgerMenu.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent immediate closing when clicking the icon
+        hamburgerDropdown.style.display = (hamburgerDropdown.style.display === "block") ? "none" : "block";
     });
 
-    // Close menu when clicking a link
-    document.querySelectorAll(".menu-link").forEach(link => {
-        link.addEventListener("click", function () {
-            hamburgerDropdown.style.display = "none"; // Close dropdown
+    // Close dropdown when clicking a menu item
+    document.querySelectorAll(".menu-item").forEach(item => {
+        item.addEventListener("click", function () {
+            hamburgerDropdown.style.display = "none"; // Close menu
         });
+    });
+
+    // Close dropdown when clicking anywhere outside of it
+    document.addEventListener("click", function (event) {
+        if (!hamburgerMenu.contains(event.target) && !hamburgerDropdown.contains(event.target)) {
+            hamburgerDropdown.style.display = "none";
+        }
     });
 
     // Scroll behavior: hide navbar and show hamburger menu on scroll down
