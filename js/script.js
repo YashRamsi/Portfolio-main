@@ -179,41 +179,53 @@ document.querySelectorAll(".nav-center a").forEach(link => {
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
     const navbar = document.querySelector(".navbar");
-    const ellipsisMenu = document.createElement("div");
-    ellipsisMenu.classList.add("ellipsis-menu");
-    ellipsisMenu.innerHTML = "&#x22EE;"; // Unicode for vertical ellipsis
 
-    const ellipsisDropdown = document.createElement("div");
-    ellipsisDropdown.classList.add("ellipsis-dropdown");
-    ellipsisDropdown.innerHTML = `
+    // Create the hamburger menu icon (☰)
+    const hamburgerMenu = document.createElement("div");
+    hamburgerMenu.classList.add("hamburger-menu");
+    hamburgerMenu.innerHTML = "&#9776;"; // Unicode for hamburger menu (☰)
+
+    // Create the dropdown menu
+    const hamburgerDropdown = document.createElement("div");
+    hamburgerDropdown.classList.add("hamburger-dropdown");
+    hamburgerDropdown.innerHTML = `
         <a href="#home">HOME</a>
-        <a href="#about">INTRO</a>
-         <a href="#about">SKILLS</a>
-          <a href="#about">CERTIFICATIONS</a>
+        <a href="#intro">INTRO</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#certifications">CERTIFICATIONS</a>
         <a href="#services">SERVICES</a>
         <a href="#portfolio">DEV HUB</a>
         <a href="#contact">CONTACT</a>
     `;
 
-    document.body.appendChild(ellipsisMenu);
-    document.body.appendChild(ellipsisDropdown);
+    document.body.appendChild(hamburgerMenu);
+    document.body.appendChild(hamburgerDropdown);
 
-    ellipsisMenu.addEventListener("click", function () {
-        ellipsisDropdown.style.display = ellipsisDropdown.style.display === "block" ? "none" : "block";
+    // Toggle dropdown menu when clicking the hamburger icon
+    hamburgerMenu.addEventListener("click", function () {
+        hamburgerDropdown.style.display = hamburgerDropdown.style.display === "block" ? "none" : "block";
     });
 
+    // Close menu when clicking a link
+    document.querySelectorAll(".menu-link").forEach(link => {
+        link.addEventListener("click", function () {
+            hamburgerDropdown.style.display = "none"; // Close dropdown
+        });
+    });
+
+    // Scroll behavior: hide navbar and show hamburger menu on scroll down
     window.addEventListener("scroll", function () {
         let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
         if (scrollTop > lastScrollTop) {
             // Scrolling Down
             navbar.style.top = "-80px"; // Hide Navbar
-            ellipsisMenu.style.display = "block"; // Show Ellipsis
+            hamburgerMenu.style.display = "block"; // Show Hamburger
         } else {
             // Scrolling Up
             navbar.style.top = "0"; // Show Navbar
-            ellipsisMenu.style.display = "none"; // Hide Ellipsis
-            ellipsisDropdown.style.display = "none"; // Close dropdown
+            hamburgerMenu.style.display = "none"; // Hide Hamburger
+            hamburgerDropdown.style.display = "none"; // Close dropdown
         }
         lastScrollTop = scrollTop;
     });
