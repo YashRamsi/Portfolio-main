@@ -157,3 +157,21 @@ function initMap() {
 document.addEventListener("DOMContentLoaded", function() {
     initMap();
 });
+
+// Toggle Mobile Navigation Menu
+const menuToggle = document.createElement("div");
+menuToggle.classList.add("menu-toggle");
+menuToggle.innerHTML = "☰";
+document.querySelector(".navbar").prepend(menuToggle);
+
+const navMenu = document.querySelector(".nav-center");
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+// Close menu after clicking a link
+document.querySelectorAll(".nav-center a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+});

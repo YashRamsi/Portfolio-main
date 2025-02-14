@@ -39,7 +39,7 @@ img {
 
 .nav-center li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -907,7 +907,7 @@ footer a:hover {
     color: #5cb85c;
 }
 
-/* Mobile Responsive Enhancements */
+/* Full Mobile & Desktop Responsive Enhancements */
 
 @media (max-width: 1024px) {
     .nav-center {
@@ -923,71 +923,69 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    /* Slim Fixed Navbar */
     .navbar {
-        position: relative;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .nav-center {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hero {
-        height: auto;
-        padding: 20px;
-    }
-    .content h1 {
-        font-size: 2rem;
-    }
-    .content p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-    .buttons button, .buttons .cv-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-    .intro-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .profile-img {
-        width: 150px;
-    }
-    .intro-text {
-        max-width: 100%;
-        text-align: center;
-    }
-    .roadmap-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    .roadmap-item {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-    }
-    .skills-container {
-        flex-direction: column;
+        height: 40px;
+        background: #6C757D;
+        display: flex;
         align-items: center;
-    }
-    .certs-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .portfolio-container {
-        flex-direction: column;
-        align-items: center;
+        padding: 5px 15px;
+        z-index: 1000;
     }
     
-    /* Modal Responsive Styles */
+    /* Hamburger Menu Toggle */
+    .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #000; /* Changed from white to black */
+    }
+    
+    /* Small Dropdown Navigation */
+    .nav-center {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        width: 200px;
+        background: rgba(108, 117, 125, 0.95);
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        padding: 10px 0;
+    }
+    
+    .nav-center.active {
+        display: flex;
+    }
+    
+    .nav-center li {
+        padding: 8px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-center li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-center a {
+        text-decoration: none;
+        color: black; /* Changed from white to black */
+        font-size: 0.9rem;
+    }
+
+    /* Responsive Modal Styles */
     .modal-content {
         width: 90%;
-        max-width: 400px;
+        max-width: 350px;
         padding: 20px;
         text-align: center;
+        border-radius: 10px;
     }
     .modal img {
         max-width: 100%;
@@ -996,6 +994,7 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
+    /* Adjust Text Sizes */
     .content h1 {
         font-size: 1.8rem;
     }
@@ -1006,13 +1005,23 @@ footer a:hover {
         padding: 8px 16px;
         font-size: 0.8rem;
     }
-    .social-links a {
-        font-size: 2rem;
-        margin: 0 10px;
+    
+    /* Navbar & Menu Adjustments */
+    .menu-toggle {
+        font-size: 1.6rem;
     }
+    
+    .nav-center {
+        width: 180px;
+        top: 40px;
+    }
+
+    /* Reduce Image Sizes */
     .profile-img {
         width: 120px;
     }
+
+    /* Layout Adjustments */
     .roadmap-container {
         flex-direction: column;
         gap: 30px;
@@ -1023,20 +1032,43 @@ footer a:hover {
     .roadmap-item p, .roadmap-item .year {
         font-size: 0.8rem;
     }
-    .skill-card {
-        width: 90%;
-    }
-    .cert-item {
-        width: 90%;
-    }
-    .service-card {
-        width: 90%;
-    }
-    .portfolio-item {
+    .skill-card, .cert-item, .service-card, .portfolio-item {
         width: 90%;
     }
     .contact p {
         font-size: 0.9rem;
     }
 }
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    /* Hide Navbar When Scrolling on Desktop, Show Shortcut Button */
+    .navbar {
+        position: absolute;
+    }
+    
+    .shortcut-nav {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #6C757D;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        font-size: 1.5rem;
+        z-index: 999;
+    }
+    
+    .shortcut-nav.active {
+        display: block;
+    }
+}
+
+
 
